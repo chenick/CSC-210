@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>ASCIImation</title>
+
+		<!-- instructor-provided JavaScript files; do not modify -->
+		<script src="animations.js" type="text/javascript"></script>
+		<script type="text/javascript" src="ascii.js"></script>
+		<!-- link to your files here -->
+		<link href="ascii.css" type="text/css" rel="stylesheet" />
+		<link rel="shortcut icon" type="image/png" href="stickman.gif"/>
+	</head>
+
+	<body>
+		<h1>ASCII Animation Viewer</h1>
+		
+		<!-- your controls should go here -->
+		<div id="display">
+			<textarea id="displayarea" rows="20" cols="80"></textarea>
+		</div>
+
+		<div>
+			<fieldset>
+				<legend>Play Controls:</legend>
+				<button id="startButton" onclick="Start()">Start</button>
+				<button id="stopButton" onclick="Stop()">Stop</button>
+			</fieldset>
+	
+			<fieldset>
+				<legend>Animation:</legend>
+				<select id="animationtype" onchange="selectAnimation()">
+					<option value="blank" selected="selected">Blank</option>
+					<option value="exercise">Exercise</option>
+					<option value="juggler">Juggler</option>
+					<option value="bike">Bike</option>
+					<option value="dive">Dive</option>
+					<option value="custom">Custom</option>
+				</select>
+			</fieldset>
+			
+		
+			<form id = "radioForm"  action="" name="SizeForm">
+				<fieldset>
+				<legend>Size:</legend>
+					<input type="radio" name="size" id="smallW" value="small" onchange="ChangeSize()" /> Small
+					<input type="radio" name="size" id="mediumW" value="medium" checked="checked" onchange="ChangeSize()" /> Medium
+					<input type="radio" name="size" id="largeW" value="large" onchange="ChangeSize()" /> Large
+				</fieldset>
+			</form>
+		
+			
+
+			<fieldset>
+				<legend>Speed:</legend>
+				<input type="checkbox" id="turbo" name="speed" value="turbo" onclick="Turbo();" /> Turbo
+			</fieldset>
+		</div>
+		
+		<div>
+			<a href="http://validator.w3.org/check/referer"><img src="http://www.cs.rochester.edu/u/jbigham/courses/210/assignments/5/w3c-xhtml.png" alt="Valid XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://www.cs.rochester.edu/u/jbigham/courses/210/assignments/5/w3c-css.png" alt="Valid CSS" /></a>
+		</div>
+	</body>
+</html>
